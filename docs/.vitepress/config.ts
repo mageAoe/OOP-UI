@@ -2,6 +2,7 @@ import { DefaultTheme, defineConfig } from 'vitepress'
 import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin'
 import { components } from '../components'
 
+import minimist from 'minimist'
 // vitepress 1.0.0-rc.24 版本下会报错
 
 const nav: DefaultTheme.NavItem[] = [
@@ -26,11 +27,14 @@ const sidebar: DefaultTheme.Sidebar = {
   }]
 }
 
+const argv = minimist(process.argv.slice(2))
+const build = argv.build || false
+
 export default defineConfig({
   title: 'oop-admin-ui',
   description: 'YYG Vue3企业级中后台组件库',
   lang: 'cn-ZH',
-  base: '/',
+  base: build ? '/OOP-UI/' : '/',
   lastUpdated: true,
   themeConfig: {
     logo: '/logo.gif',
@@ -42,6 +46,11 @@ export default defineConfig({
     nav,
     sidebar
   },
+  head: [
+    [
+      'link',{ rel: 'icon', href: build ? '/OOP-UI/favicon.gif' : '/favicon.gif' }
+    ]
+  ],
   markdown: {
     theme: {
       light: 'vitesse-light',

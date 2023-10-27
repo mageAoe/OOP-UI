@@ -1,6 +1,6 @@
 {
   "name": "special-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "private": false,
   "type": "module",
@@ -34,7 +34,8 @@
     "lint": "eslint \"{cli,packages,docs,example}/**/*.{js,ts,vue,jsx,tsx}\" --fix",
     "commit": "git-cz",
     "start:verdaccio": "pnpm verdaccio",
-    "pub:local": "pnpm publish --registry http://localhost:4873/"
+    "pub:local": "pnpm publish --registry http://localhost:4873/",
+    "docs:deploy": "pnpm run docs:build && gh-pages -d docs/.vitepress/dist"
   },
   "keywords": [],
   "author": "",
@@ -63,6 +64,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.18.0",
+    "gh-pages": "^6.0.0",
     "sass": "^1.69.4",
     "typescript": "^5.2.2",
     "verdaccio": "^5.27.0",
