@@ -9,7 +9,7 @@ hero:
   text: OOP Vue3企业级中后台组件库
   tagline: 主打简约、special
   image:
-    src: /logo.gif
+    src: /MergedImages.png
     alt: oop-admin-ui
   actions:
     - theme: brand
@@ -20,12 +20,12 @@ hero:
       link: /components/foo
 features:
   - icon: 🔨
-    title: 功能/特点 1
-    details: 功能/特点 1 具体描述信息。
+    title: 功能/简单
+    details: 功能/使用简单、样式简约。
   - icon: 🧩
-    title: 功能/特点 2
-    details: 功能/特点 2 具体描述信息。
+    title: 功能/自由组合
+    details: 功能/各个组件可自由组合。
   - icon: ✈️
-    title: 功能/特点 3。
-    details: 功能/特点 3 具体描述信息。
+    title: 功能/tree-shaking
+    details: 功能/支持全局导入、按需引入。
 ---
